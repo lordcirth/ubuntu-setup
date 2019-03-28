@@ -29,9 +29,7 @@ if ! which salt-minion; then
 	sudo apt install -yq salt-minion
 fi
 
-#mkdir -p ~/gitRepos/
-#git clone "$GIT_REPO" ~/gitRepos/ubuntu-setup
-mkdir -p /srv/saltstack/states
-mkdir -p /srv/saltstack/pillar
+mkdir -p /srv/saltstack/
 
 sudo cp "$SCRIPT_DIR/states" /srv/saltstack/states
+#sudo cp "$SCRIPT_DIR/pillar" /srv/saltstack/pillar
