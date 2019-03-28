@@ -1,5 +1,5 @@
 apt_upgrade:
-  pkg.uptodate
+  pkg.uptodate:
     - refresh: True
 
 # TODO: LTS only?

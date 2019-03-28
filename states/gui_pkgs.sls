@@ -1,6 +1,6 @@
 nextcloud_client_repo:
   pkgrepo.managed:
-    - ppa: 'ppa:nextcloud-devs/client'
+    - ppa: 'nextcloud-devs/client'
 
 
 gui_pkgs:

@@ -26,10 +26,9 @@ if ! which salt-minion; then
 	# We don't want to connect to a salt-master
 	sudo mkdir -p /etc/salt/
 	sudo cp "$SCRIPT_DIR/minion" /etc/salt/minion
-	sudo apt install -yq salt-minion
+	sudo apt install -yq --force-confold salt-minion
 fi
 
-mkdir -p /srv/saltstack/
+sudo mkdir -p /srv/saltstack/
 
-sudo cp "$SCRIPT_DIR/states" /srv/saltstack/states
-#sudo cp "$SCRIPT_DIR/pillar" /srv/saltstack/pillar
+sudo ln -s "$SCRIPT_DIR/states" /srv/saltstack/states
