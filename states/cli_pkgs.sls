@@ -27,6 +27,8 @@ apt_cli_pkgs:
       - neovim
       - nmap
       - pastebinit
+      - python-pip
+      - python3-pip
       - pv
       - tasksh
       - tmux
