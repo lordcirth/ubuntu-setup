@@ -34,4 +34,3 @@ apt_cli_pkgs:
       - tmux
       - tree
       - wget
-      - zfsutils-linux
