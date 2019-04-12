@@ -29,6 +29,8 @@ if ! which salt-minion; then
 	sudo apt install -o Dpkg::Options::="--force-confold" -yq  salt-minion
 fi
 
-sudo mkdir -p /srv/saltstack/
+if [ ! -d /srv/saltstack/ ]; then
+	sudo mkdir -p /srv/saltstack/
+	sudo ln -s "$SCRIPT_DIR/states" /srv/saltstack/states
+fi
 
-sudo ln -s "$SCRIPT_DIR/states" /srv/saltstack/states
