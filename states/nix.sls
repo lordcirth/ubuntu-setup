@@ -2,6 +2,6 @@
 
 # TODO: not curl | sh?
 nix_script:
-  cmd.run:
-    - name: 'https://nixos.org/nix/install'
-    - creates: '/nix'
+  cmd.script:
+    - source:   'https://nixos.org/nix/install'
+    - creates:  '/nix'

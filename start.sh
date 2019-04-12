@@ -26,7 +26,7 @@ if ! which salt-minion; then
 	# We don't want to connect to a salt-master
 	sudo mkdir -p /etc/salt/
 	sudo cp "$SCRIPT_DIR/minion" /etc/salt/minion
-	sudo apt install -yq --force-confold salt-minion
+	sudo apt install -o Dpkg::Options::="--force-confold" -yq  salt-minion
 fi
 
 sudo mkdir -p /srv/saltstack/
